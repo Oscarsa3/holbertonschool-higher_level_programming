@@ -5,7 +5,8 @@ pos = number
 if number < 0:
 	pos *= -1
 last = pos % 10
-
+if number < 0:
+	last *= -1 
 if last > 5:
 	print(f"Last digit of {number} is {last} and is greater than 5")
 elif last == 0:

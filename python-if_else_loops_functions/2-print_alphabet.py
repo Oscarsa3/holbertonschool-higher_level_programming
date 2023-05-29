@@ -2,5 +2,5 @@
 a = 97
 b = 122
 while a <= b:
-	print(chr(a), end='')
+	print(f"{chr(a)}", end='')
 	a = a + 1

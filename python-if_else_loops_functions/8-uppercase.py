@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def uppercase(str):
-    i = len(str)
     a = 0
-    while a < i:
-        if ord(str[a]) >= 97 and ord(str[a]) <= 122:
-            print(f"{chr(ord(str[a]) - 32)}", end='')
+    mayu = ""
+    for i in range(len(str)):
+        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
+            mayu += chr(ord(str[i]) - 32)
         else:
-            print(f"{str[a]}", end='')
+            mayu += str[i]
         a += 1
-    print()
+    print(mayu)

@@ -8,4 +8,4 @@ def uppercase(str):
         else:
             mayu += str[i]
         a += 1
-    print(mayu)
+    print("{}".format(mayu))

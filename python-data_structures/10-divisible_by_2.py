@@ -9,5 +9,4 @@ def divisible_by_2(my_list=[]):
             else:
                 new[i] = False
             i += 1
-        print(new)
         return new

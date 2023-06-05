@@ -6,4 +6,3 @@ def max_integer(my_list=[]):
             if ma < my_list[i]:
                 ma = my_list[i]
         return ma
-    return "None"

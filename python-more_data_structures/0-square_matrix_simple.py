@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if matrix:
-        new = [[1]] * len(matrix)
-        row = 0
-        while row < len(matrix):
-            a = row
-            i = 0
-            while i < len(matrix[row]):
-                new[a] = list(map(potencia, matrix[row]))
-                i += 1
-            row += 1
-        return new
+    new = [[1]] * len(matrix)
+    row = 0
+    while row < len(matrix):
+        a = row
+        i = 0
+        while i < len(matrix[row]):
+            new[a] = list(map(potencia, matrix[row]))
+            i += 1
+        row += 1
+    return new
 
 
 def potencia(numero):
-    return numero ** 2
+    return numero * numero

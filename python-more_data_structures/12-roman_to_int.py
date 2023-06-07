@@ -8,7 +8,8 @@ def roman_to_int(roman_string):
         return romanos.get(roman_string)
     else:
         b = 0
-        for i in range(len(roman_string)):
+        i = 0
+        while i < len(roman_string):
             a = roman_string[i]
             if i == len(roman_string) - 1:
                 b += romanos.get(a)
@@ -32,4 +33,5 @@ def roman_to_int(roman_string):
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
             b += romanos.get(a)
+            i += 1
     return b

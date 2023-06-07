@@ -34,4 +34,4 @@ def roman_to_int(roman_string):
                 break
             b += romanos.get(a)
             i += 1
-    return b
+    return int(b)

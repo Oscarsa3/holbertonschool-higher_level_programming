@@ -2,6 +2,7 @@
 def roman_to_int(roman_string):
     if not roman_string:
         return 0
+    roman_string = roman_string.upper()
     romanos = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     if roman_string in romanos.keys():
         return romanos.get(roman_string)
@@ -31,4 +32,4 @@ def roman_to_int(roman_string):
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
             b += romanos.get(a)
-        return abs(b)
+        return b

@@ -32,4 +32,4 @@ def roman_to_int(roman_string):
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
             b += romanos.get(a)
-        return b
+    return b

@@ -26,4 +26,3 @@ def roman_to_int(roman_string):
             else:
                 b += romanos.get(a)
         return b
-    return 0

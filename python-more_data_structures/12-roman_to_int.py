@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
             a = roman_string[i]
             if i == len(roman_string) - 1:
                 b += romanos.get(a)
-                break
+                continue
             if roman_string[i] == 'I' and roman_string[i + 1] == 'V':
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
@@ -21,4 +21,6 @@ def roman_to_int(roman_string):
                 break
             else:
                 b += romanos.get(a)
+        if b >= 3999:
+            return 3999
     return b

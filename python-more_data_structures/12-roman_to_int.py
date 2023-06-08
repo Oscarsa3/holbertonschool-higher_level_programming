@@ -24,7 +24,7 @@ def roman_to_int(roman_string):
                     b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                     break
                 b += romanos.get(a)
-            elif not in romanos.keys():
+            elif not roman_string[i] in romanos.keys():
                 return
             else:
                 b += romanos.get(a)

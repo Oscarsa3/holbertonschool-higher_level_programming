@@ -20,18 +20,6 @@ def roman_to_int(roman_string):
             elif roman_string[i] == 'I' and roman_string[i + 1] == 'X':
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
-            elif roman_string[i] == 'I' and roman_string[i + 1] == 'L':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
-                break
-            elif roman_string[i] == 'I' and roman_string[i + 1] == 'C':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
-                break
-            elif roman_string[i] == 'I' and roman_string[i + 1] == 'D':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
-                break
-            elif roman_string[i] == 'I' and roman_string[i + 1] == 'M':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
-                break
             b += romanos.get(a)
             i += 1
     return int(b)

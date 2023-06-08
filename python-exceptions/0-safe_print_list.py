@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             print(my_list[i], end="")
             contador += 1
-        except NameError:
+        except:
             continue
     print()
     return contador

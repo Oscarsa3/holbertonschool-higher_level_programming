@@ -12,15 +12,19 @@ def roman_to_int(roman_string):
         for i in range(len(roman_string)):
             a = roman_string[i]
             if i == len(roman_string) - 1:
-                b += romanos.get(roman_string[i])
-                continue
-            if roman_string[i] == 'I' and roman_string[i + 1] == 'V':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
+                b += romanos.get(a)
                 break
-            elif roman_string[i] == 'I' and roman_string[i + 1] == 'X':
-                b += romanos.get(roman_string[i + 1]) - romanos.get(a)
-                break
-            elif not roman_string[i] in romanos.keys():
+            if a == 'I' and roman_string[i + 1] == 'V':
+                if roman_string[i - 1] != 'I':
+                    b += romanos.get(roman_string[i + 1]) - romanos.get(a)
+                    break
+                b += romanos.get(a)
+            elif a == 'I' and roman_string[i + 1] == 'X':
+                if roman_string[i - 1] != 'I':
+                    b += romanos.get(roman_string[i + 1]) - romanos.get(a)
+                    break
+                b += romanos.get(a)
+            elif not in romanos.keys():
                 return
             else:
                 b += romanos.get(a)

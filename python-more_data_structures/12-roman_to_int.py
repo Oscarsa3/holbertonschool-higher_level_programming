@@ -20,8 +20,8 @@ def roman_to_int(roman_string):
             elif roman_string[i] == 'I' and roman_string[i + 1] == 'X':
                 b += romanos.get(roman_string[i + 1]) - romanos.get(a)
                 break
-            elif not roman_string[i] in romanos:
-                break
+            elif not roman_string[i] in romanos.keys():
+                return 0
             else:
                 b += romanos.get(a)
         return b

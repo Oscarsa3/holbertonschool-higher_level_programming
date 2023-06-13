@@ -1,0 +1,23 @@
+Testing add_integer
+------------------------------------------------------------------------------
+
+import add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
+
+example 1
+>>> add_integer(1, 2)
+3
+
+example 2
+>>> add_integer(99999, 87654321)
+87754320
+
+Testing errors whith input
+
+example 1
+>>> add_integer("2", 2)
+traceback
+
+example 2
+>>> add_integer(2, "mundo")
+traceback

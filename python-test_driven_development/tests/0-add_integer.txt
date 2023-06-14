@@ -23,7 +23,27 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+>>> add_integer(5, 'g')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 >>> add_integer(2, "mundo")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+>>> add_integer("hola", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer('h', 'o')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer("hola", "mundo")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer((2, 5), (4, 0))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer

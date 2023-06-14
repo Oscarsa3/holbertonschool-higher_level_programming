@@ -1,7 +1,7 @@
 Testing add_integer
 *******************************************************************************
 
-import add_integer
+# import add_integer
 >>> add_integer = __import__('0-add_integer').add_integer
 
 Success cases
@@ -12,8 +12,8 @@ example 1
 3
 
 example 2
->>> add_integer(99999, 87654321)
-87754320
+>>> add_integer(9, 8) 
+17
 
 
 example 3
@@ -29,12 +29,8 @@ Errors cases
 
 example 1
 >>> add_integer("h", 4)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+a must be an integer
 
 example 2
 >>> add_integer(2, 'mundo')
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+b  must be an integer

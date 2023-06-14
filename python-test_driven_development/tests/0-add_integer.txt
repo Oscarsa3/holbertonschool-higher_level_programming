@@ -29,8 +29,12 @@ Errors cases
 
 example 1
 >>> add_integer("h", 4)
-a must be an integer
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 
 example 2
 >>> add_integer(2, 'mundo')
-b must be an integer
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

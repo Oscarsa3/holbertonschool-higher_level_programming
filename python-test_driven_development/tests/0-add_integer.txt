@@ -1,40 +1,49 @@
-Testing add_integer
-*******************************************************************************
-
-# import add_integer
 >>> add_integer = __import__('0-add_integer').add_integer
-
-Success cases
-*******************************************************************************
-
-example 1
 >>> add_integer(1, 2)
 3
-
-example 2
 >>> add_integer(9, 8) 
 17
-
-
-example 3
 >>> add_integer(-4, 2)
 -2
-
-example 4
 >>> add_integer(-3, -3)
 -6
-
-Errors cases
-*******************************************************************************
-
-example 1
->>> add_integer("h", 4)
+>>> add_integer(1.0, 2.0)
+3
+>>> add_integer(2)
+100
+>>> add_integer(None)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
-
-example 2
->>> add_integer(2, 'mundo')
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer('h', 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(5, 'g')
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+>>> add_integer(2, "mundo")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("hola", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer('h', 'o')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer("hola", "mundo")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer((2, 5), (4, 0))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer

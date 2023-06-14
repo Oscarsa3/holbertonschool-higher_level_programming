@@ -1,34 +1,18 @@
-Testing add_integer
-
 >>> add_integer = __import__('0-add_integer').add_integer
-
-example 1
 >>> add_integer(1, 2)
 3
-
-example 2
 >>> add_integer(9, 8) 
 17
-
-example 3
 >>> add_integer(-4, 2)
 -2
-
-example 4
 >>> add_integer(-3, -3)
 -6
-
-example 5
 >>> add_integer(1.0, 2.0)
 3
-
-example 6
 >>> add_integer('h', 4)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
-
-example 7
 >>> add_integer(2, "mundo")
 Traceback (most recent call last):
 ...

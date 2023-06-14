@@ -9,7 +9,7 @@
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> add_integer('g', 6)
+>>> add_integer("hola", 6)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer

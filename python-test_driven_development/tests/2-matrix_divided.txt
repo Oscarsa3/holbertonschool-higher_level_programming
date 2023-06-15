@@ -11,6 +11,10 @@ THIS IS MY TEST FILE ::
 >>> matrix_divided([[2, 4], [6, 8]], 2)
 [[1.0, 2.0], [3.0, 4.0]]
 
+# Probramos nuestra funcion con un matriz y un float::
+>>> matrix_divided([[2.3, 5], [2, 7]], 2.4)
+[[0.96, 2.08], [0.83, 2.92]]
+
 
 # Probamos nuestra funcion dividiendo entre 0::
 =======================================================

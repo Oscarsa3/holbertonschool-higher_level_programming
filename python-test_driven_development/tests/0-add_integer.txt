@@ -13,6 +13,9 @@
 5
 >>> add_integer(111111111, 111111111)
 222222222
+>>> add_integer(float('h'), 8)
+Traceback (most recent call last):
+ValueError: could not convert string to float: 'h'
 >>> add_integer(2, 4, 7)
 Traceback (most recent call last):
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

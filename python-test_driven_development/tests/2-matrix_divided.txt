@@ -28,7 +28,7 @@ ZeroDivisionError: division by zero
 
 # Probamos nustra funcion enviandole un string dentro de una matriz::
 ===========================================================================
->>> matrix_divided([[2, 5], ["3", 5]])
+>>> matrix_divided([[2, 5], ["3", 5]], 2)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats

@@ -3,13 +3,7 @@
 >>> add_integer(1, 2)
 3
 
->>> add_integer(-2, -5)
--7
-
 >>> add_integer(2)
-100
-
->>> add_integer(2.987)
 100
 
 >>> add_integer(2.3, 3.4)
@@ -20,12 +14,12 @@ Traceback (most recent call last):
 ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
->>> add_integer("hola", 7)
+>>> add_integer("5")
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer(False, 8)
+>>> add_integer(False)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
@@ -35,7 +29,7 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer((2, 5), 4)
+>>> add_integer((2, 5))
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer

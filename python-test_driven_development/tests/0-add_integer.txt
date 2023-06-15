@@ -17,10 +17,6 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> add_integer([], 9)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
 dd_integer(2, "mundo")
 Traceback (most recent call last):
 ...

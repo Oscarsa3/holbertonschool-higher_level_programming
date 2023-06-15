@@ -10,7 +10,7 @@ class Rectangle:
         self.width = width
 
     def __str__(self):
-        if self.__width != 0 or self.__height != 0:
+        if self.__width != 0 and self.__height != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
                     print("#", end='')

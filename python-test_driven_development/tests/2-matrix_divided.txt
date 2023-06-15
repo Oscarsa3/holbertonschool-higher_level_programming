@@ -12,6 +12,14 @@ THIS IS MY TEST FILE ::
 [[1.0, 2.0], [3.0, 4.0]]
 
 
+# Probamos nuestra funcion dividiendo entre 0::
+=======================================================
+>>> matrix_divided([[2, 4], [6, 8]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+
 # Probramos nuestra funcion con un matriz y un entero::
 =============================================================
 >>> matrix_divided([[1.8, 5.4], [2.5, 5.6]], 3)

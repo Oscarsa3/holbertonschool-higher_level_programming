@@ -15,6 +15,9 @@ def matrix_divided(matrix, div):
         if x != len(matrix) - 1:
             if len(matrix[x]) != len(matrix[x + 1]):
                 raise TypeError(error2)
+        for k in range(len(matrix[x])):
+            if type(matrix[x][k]) not in [int, float]:
+                raise TypeError(error)
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     if div == 0:

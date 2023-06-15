@@ -1,0 +1,20 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [[2, 4], [6, 8]]
+>>> matrix_divided(matrix, 2)
+[[1.0, 2.0], [3.0, 4.0]]
+
+>>> matrix =[[2, 3, 4, 5], [3, 4, 5]]
+>>> matrix_divided(matrix, 5)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided(None)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'

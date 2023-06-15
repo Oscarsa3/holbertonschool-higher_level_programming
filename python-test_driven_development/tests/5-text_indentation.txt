@@ -1,20 +1,44 @@
+THIS IS MY TEST FILE ::
+===================================================================================================
+
+# Importamos nuestra funcion::
+============================================
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+
+# Probramos nuestra funcion con string::
+=========================================================
 >>> text_indentation("Hola? Mundo.")
 Hola?
 <BLANKLINE>
 Mundo.
 <BLANKLINE>
 
+
+# Probramos nuestra funcion con un string sin separador::
+=========================================================
+>>> text_indentation("Hola Mundo")
+Hola Mundo
+
+
+# Probramos nuestra funcion enviandole un entero::
+=========================================================
 >>> text_indentation(15)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
+
+
+# Probamos nuestra funcion enviandole None::
+=================================================
 >>> text_indentation(None)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
+
+# Probamos nuestra funcion sin argumentos::
+=================================================
 >>> text_indentation()
 Traceback (most recent call last):
 ...

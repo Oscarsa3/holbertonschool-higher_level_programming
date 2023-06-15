@@ -6,8 +6,17 @@
 >>> add_integer(2)
 100
 
+>>> add_integer(123456789009876543243567887654, 4567876545671234567890098765432)
+4691333334681111111133666653086
+
 >>> add_integer(2.3, 3.4)
 5
+
+>>>  add_integer("3")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
 
 >>> add_integer(2, 4, 7)
 Traceback (most recent call last):

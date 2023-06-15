@@ -1,83 +1,150 @@
+THIS IS MY TEST FILE ::
+===================================================================================================
+
+
+# Importamos nuestra funcion::
+============================================
 >>> add_integer = __import__('0-add_integer').add_integer
 
+
+# Probramos nuestra funcion con dos enteros::
+=========================================================
 >>> add_integer(1, 2)
 3
 
+
+# Probamos nuestra funcion con solo un parametro entero::
+===================================================================
 >>> add_integer(2)
 100
 
+
+# Probamos nuestra funcion con dos numeros grandes::
+=================================================================================
 >>> add_integer(123456789009876543243567887654, 4567876545671234567890098765432)
 4691333334681111111133666653086
 
+
+# Probamos nuestra funcion con dos argumentos float::
+==================================================================
 >>> add_integer(2.3, 3.4)
 5
 
+
+# Probamos nuestra funcion con un argumento de tipo string::
+=======================================================================
 >>> add_integer("3")
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcioncon un argumento entero y otro argumento string::
+=============================================================================
 >>> add_integer(0, "hola")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
+
+# Probamos nuestra funcion con un argumento de tipo lista::
+=============================================================
 >>> add_integer([3, 4, 5])
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcion con un argumento de tipo  tupla::
+================================================================
 >>> add_integer((2, 4))
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcion con dos argumento de tipo lista::
+=============================================================
 >>> add_integer([[4, 4], [5, 6]])
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+# Probamos nuestra funcion con tres argumento::
+================================================================
 >>> add_integer(2, 4, 7)
 Traceback (most recent call last):
 ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
+
+# Probamos nuestra funcion con un argumento booleano y un entero::
+========================================================================
 >>> add_integer(False, 7)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcion enviandole un None::
+====================================================
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcion con dosargumentos de tipo tupla::
+==============================================================
 >>> add_integer((2, 5), (8, 7, 8))
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+#Probamos nuestra sin enviarle argumentos::
+====================================================
 >>> add_integer()
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
+
+# Probamos nuestra funcion enviandole un entero y una lista::
+==================================================================
 >>> add_integer(6, [4, 8])
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
+
+# Probamos nuestra funcion enviandole un argumento de tipo diccionario::
+=========================================================================
 >>> add_integer({'6': 6})
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+# Probamos nuestra funcion enviandole un metodo float y un entero::
+=======================================================================
 >>> add_integer(float('and'), 8)
 Traceback (most recent call last):
 ...
 ValueError: could not convert string to float: 'and'
 
+
+# Probamos nuestra funcion enviandole un metodo float y un entero::
+=====================================================================
 >>> add_integer(float("inf"), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+
+# Probamos nuestra funcion enviandole un metodo float y un entero::
+======================================================================
+>>> add_integer(float("-inf"), 1)
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer

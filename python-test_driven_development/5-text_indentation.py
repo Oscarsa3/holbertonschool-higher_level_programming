@@ -14,9 +14,11 @@ function"""
         raise TypeError("text must be a string")
     a = 0
     for x in text:
-        if a == 1:
+        if a == 1 and x == ' ':
             x = ""
+        elif a == 1 and x != ' ':
             a = 0
+            pass
         if x in ['.', '?', ':']:
             a = 1
             print(f"{x}\n\n", end='')

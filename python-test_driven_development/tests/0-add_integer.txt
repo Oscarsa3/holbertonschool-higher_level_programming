@@ -13,6 +13,36 @@ THIS IS MY TEST FILE ::
 3
 
 
+# Probramos nuestra funcion con un positivo y un negativo::
+====================================================
+>>> add_integer(100, -2)
+98
+
+
+# Probramos nuestra funcion con un negativo y un positivo::
+==================================================
+>>> add_integer(-2, 102)
+100
+
+
+# Probramos nuestra funcion con un negativo y un float::
+===========================================================
+>>> add_integer(-2, 25.56)
+23
+
+
+# Probramos nuestra funcion con un float y un negativo::
+==========================================================
+>>> add_integer(2.5767, -1)
+1
+
+
+# Probramos nuestra funcion con dos negativos::
+========================================================
+>> add_integer(-5, -9)
+-14
+
+
 # Probamos nuestra funcion con solo un parametro entero::
 ===================================================================
 >>> add_integer(2)
@@ -102,7 +132,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 
-#Probamos nuestra sin enviarle argumentos::
+# Probamos nuestra sin enviarle argumentos::
 ====================================================
 >>> add_integer()
 Traceback (most recent call last):
@@ -134,7 +164,7 @@ Traceback (most recent call last):
 ValueError: could not convert string to float: 'and'
 
 
-# Probamos nuestra funcion enviandole un metodo float y un entero::
+# Probamos nuestra funcion enviandole un metodo float infinito y un entero::
 =====================================================================
 >>> add_integer(float("inf"), 1)
 Traceback (most recent call last):
@@ -142,8 +172,8 @@ Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
 
-# Probamos nuestra funcion enviandole un metodo float y un entero::
-======================================================================
+# Probamos nuestra funcion enviandole un metodo float infinito negativo y un entero::
+========================================================================================
 >>> add_integer(float("-inf"), 1)
 Traceback (most recent call last):
 ...

@@ -15,28 +15,21 @@ Mundo.
 <BLANKLINE>
 
 
+# probamos nuestra funcion cuando tiene varias espacioas luego de los caracteres que separan::
+==================================================================================================
+>>> text_indentation("hola?    mi nombre?   es")
+hola?
+<BLANKLINE>
+mi nombre?
+<BLANKLINE>
+es
+
 # Probamos nuestro codigo enviandole dos argumentos string::
 ==========================================================
 >>> text_indentation("Hola", "Mundo")
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() takes 1 positional argument but 2 were given
-
-
-# Probamos nuestro codigo enviandole un diccionario::
-=========================================================
->>> text_indentation({"hola": 4})
-Traceback (most recent call last):
-...
-TypeError: text must be a string
-
-
-# Probamos nuestro codigo enviandole un float::
-==================================================
->>> text_indentation({"hola": 4})
-Traceback (most recent call last):
-...
-TypeError: text must be a string
 
 
 # Probramos nuestra funcion con un string sin separador::

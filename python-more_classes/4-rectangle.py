@@ -21,7 +21,7 @@ class Rectangle:
         return ""
 
     def __repr__(self):
-        n = 'Rectangle(' + str(self.__width) + ',' + str(self.__height) + ')'
+        n = 'Rectangle(' + str(self.__width)+','+str(self.__height)+')'
         return n
 
     @property

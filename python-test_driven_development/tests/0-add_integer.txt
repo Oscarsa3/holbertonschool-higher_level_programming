@@ -15,6 +15,9 @@
 >>> add_integer(2)
 100
 
+>>> add_integer(2.987)
+100
+
 >>> add_integer(2.3, 3.4)
 5
 
@@ -34,10 +37,16 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+>>> add_integer(False, 8)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
 >>> add_integer(5, "mundo")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 >>> add_integer(None)
 Traceback (most recent call last):
 ...

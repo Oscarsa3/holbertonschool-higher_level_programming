@@ -1,40 +1,65 @@
+THIS IS MY TEST FILE ::
+=========================================================================
+
+# Importamos nuestra funcion::
+=====================================================================
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 
->>> matrix = [[2, 4], [6, 8]]
->>> matrix_divided(matrix, 2)
+# Probramos nuestra funcion con un matriz y un entero::
+============================================================
+>>> matrix_divided([[2, 4], [6, 8]], 2)
 [[1.0, 2.0], [3.0, 4.0]]
 
 
->>> matrix = [[1.8, 5.4], [2.5, 5.6]]
->>> matrix_divided(matrix, 3)
+# Probramos nuestra funcion con un matriz y un entero::
+=============================================================
+>>> matrix_divided([[1.8, 5.4], [2.5, 5.6]], 3)
 [[0.6, 1.8], [0.83, 1.87]]
 
+
+# Probramos nuestra funcion con una string y un entero::
+==========================================================
 >>> matrix_divided("matrix", 5)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix = ["Hola", [2.5, 5.6]]
->>> matrix_divided(matrix, 5)
+
+# Probramos nuestra funcion con una string y un entero::
+==============================================================
+>>> matrix_divided(["Hola", [2.5, 5.6]], 3)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
->>> matrix =[[2, 3, 4, 5], [3, 4, 5]]
->>> matrix_divided(matrix, 5)
+# Probamosnuestra funcion enviando una lista y un entero::
+================================================================
+>>> matrix_divided(["matrix", 3], 5)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+# Probamosnuestra funcion enviando una lista y un entero::
+================================================================
+>>> matrix_divided([[2, 3, 4, 5], [3, 4, 5]], 5)
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
 
 
+# Probamos  nuestra  funcion sin enviarle parametros::
+============================================================
 >>> matrix_divided()
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
 
+# Probamos nuestra funcion enviandole None::
+====================================================
 >>> matrix_divided(None)
 Traceback (most recent call last):
 ...

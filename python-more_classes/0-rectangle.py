@@ -4,5 +4,4 @@
 
 class Rectangle:
     """Define the function"""
-    
     pass

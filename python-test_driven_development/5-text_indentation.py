@@ -12,7 +12,7 @@ def text_indentation(text):
     for x in text:
         if a == 1:
             x = ""
-            a =  0
+            a = 0
         if x in ['.', '?', ':']:
             a = 1
             print(f"{x}\n\n", end='')

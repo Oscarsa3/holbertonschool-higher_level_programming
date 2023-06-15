@@ -39,10 +39,10 @@ Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
->>> add_integer({4, 8})
+>>> add_integer(6, {4, 8})
 Traceback (most recent call last):
 ...
-TypeError: a must be an integer
+TypeError: b must be an integer
 
 >>> add_integer(float("inf"), 1)
 Traceback (most recent call last):

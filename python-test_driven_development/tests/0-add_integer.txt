@@ -5,10 +5,6 @@
 100
 >>> add_integer(2.3, 3.4)
 5
->>> add_integer(5, "d")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
 ...

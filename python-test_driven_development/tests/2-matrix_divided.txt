@@ -11,6 +11,7 @@ THIS IS MY TEST FILE ::
 >>> matrix_divided([[2, 4], [6, 8]], 2)
 [[1.0, 2.0], [3.0, 4.0]]
 
+
 # Probramos nuestra funcion con un matriz y un float::
 >>> matrix_divided([[2.3, 5], [2, 7]], 2.4)
 [[0.96, 2.08], [0.83, 2.92]]
@@ -24,6 +25,14 @@ THIS IS MY TEST FILE ::
 # Probamos nuestra funcion con el segundo parametro float("NaN")
 >>> matrix_divided([[2.3, 5], [2, 7]], float("NaN"))
 [[nan, nan], [nan, nan]]
+
+
+# Probamos nuestrafuncion enviando en el segundo argumento un string::
+=========================================================================
+>>> matrix_divided([[2.3, 5], [2, 7]], "Hola")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
 
 
 # Probamos nuestra funcion dividiendo entre 0::

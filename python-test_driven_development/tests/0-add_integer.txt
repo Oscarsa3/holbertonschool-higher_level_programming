@@ -25,10 +25,6 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> add_integer('h', 'o')
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
 >>> add_integer("hola", "mundo")
 Traceback (most recent call last):
 ...

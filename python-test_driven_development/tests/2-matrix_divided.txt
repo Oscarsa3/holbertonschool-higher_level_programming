@@ -16,6 +16,16 @@ THIS IS MY TEST FILE ::
 [[0.96, 2.08], [0.83, 2.92]]
 
 
+# Probamos nuestra funcion con el segundo parametro float("inf")
+>>> matrix_divided([[2.3, 5], [2, 7]], float("inf"))
+[[0.0, 0.0], [0.0, 0.0]]
+
+
+# Probamos nuestra funcion con el segundo parametro float("NaN")
+>>> matrix_divided([[2.3, 5], [2, 7]], float("NaN"))
+[[nan, nan], [nan, nan]]
+
+
 # Probamos nuestra funcion dividiendo entre 0::
 =======================================================
 >>> matrix_divided([[2, 4], [6, 8]], 0)

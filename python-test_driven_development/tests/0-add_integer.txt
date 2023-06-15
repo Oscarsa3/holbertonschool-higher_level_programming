@@ -69,6 +69,14 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 
+## Probamos nuestra funcion con un argumento de tipo string::
+=====================================================================
+>>> add_integer("3", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
 # Probamos nuestra funcioncon un argumento entero y otro argumento string::
 =============================================================================
 >>> add_integer(0, "hola")
@@ -178,3 +186,10 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+
+
+# Probamos nuestra funcion con un float("NaN")::
+=======================================================
+>>> add_integer(float("NaN"))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer

@@ -3,11 +3,14 @@
 >>> add_integer(1, 2)
 3
 
->>> add_integer(9, -8) 
+>>> add_integer(-2, -3) 
+-5
+
+>>> add_integer(-2, 3)
 1
 
->>> add_integer(123456789, 123456789)
-246913578
+>>> add_integer(2, -1)
+1
 
 >>> add_integer(2)
 100
@@ -15,40 +18,50 @@
 >>> add_integer(2.3, 3.4)
 5
 
+>>> add_integer(2.5, 5)
+7
+
+>>> add_integer(5, 3.4)
+8
+
 >>> add_integer(2, 4, 7)
 Traceback (most recent call last):
 ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
->>> add_integer('hola')
+>>> add_integer("hola", 7)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+>>> add_integer(5, "mundo")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer(2, "mundo")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
-
->>> add_integer((2, 5), (4, 0))
+>>> add_integer("Hola", "mundo")
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+>>> add_integer((2, 5), 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(5, (4, 4))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
 >>> add_integer()
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
-
->>> add_integer("hola", 4)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
 
 >>> add_integer({4, 8}, [5, 7])
 Traceback (most recent call last):

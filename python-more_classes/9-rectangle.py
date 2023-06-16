@@ -26,7 +26,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return cls(width=size, height=size)
+        return Rectangle(width=size, height=size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):

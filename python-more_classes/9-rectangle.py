@@ -1,9 +1,17 @@
 #!/usr/bin/python3
-"""Create an empty class Rectangle that defines a rectangle"""
+"""Create an class Rectangle that defines a rectangle,
+Private instance attribute: width, Private instance attribute: height,
+Public class attribute number_of_instances, Public class attribute
+print_symbol, Public instance method: def area(), Public instance
+method: def perimeter(), Static method def bigger_or_equal(rect_1, rect_2),
+Class method def square(cls, size=0).
+"""
 
 
 class Rectangle:
-    """Define the function"""
+    """Define Private instance attribute, Public class attribute,
+    Static method,  Class method.
+    """
 
     number_of_instances = 0
     print_symbol = "#"

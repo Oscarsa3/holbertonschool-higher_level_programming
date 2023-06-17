@@ -20,14 +20,11 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
         self.assertAlmostEqual(max_integer([]), None)
 
-    def test_none(self):
-        """Verificamos cuando nuestra funcion está vacía"""
-        self.assertIsNone(max_integer())
-
     def test_except(self):
         """Verificamos nuestra funcion enviando diferentes
         tipos de datos y tambien dentro de una lista"""
 
+        self.assertRaises(Exception, max_integer, None)
         self.assertRaises(Exception, max_integer("Hola"))
         self.assertRaises(Exception, max_integer('8'))
         self.assertRaises(Exception, max_integer((3, 6, 8)))

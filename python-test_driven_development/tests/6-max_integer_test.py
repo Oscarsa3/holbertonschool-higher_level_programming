@@ -9,6 +9,7 @@ class TestMaxInteger(unittest.TestCase):
     """Define test about max_integer() function"""
 
     def test_max(self):
+        self.assertAlmostEqual(max_integer([1]), 1)
         self.assertAlmostEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertAlmostEqual(max_integer([23, 65, 789]), 789)
         self.assertAlmostEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
@@ -29,4 +30,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer("Hola"))
         self.assertRaises(TypeError, max_integer([8, 0, 5.6, 8, 9]))
         self.assertRaises(TypeError, max_integer((3, 6, 8)))
-        self.assertRaises(TypeError, max_integer([7]))
+
+    def test_except(self):
+        self.assertRaises(Exception, max_integer, ["Hola", 0, 8, 9])
+        self.assertRaises(Exception, max_integer, [8, {4: 6}, '9', (3, 6)])

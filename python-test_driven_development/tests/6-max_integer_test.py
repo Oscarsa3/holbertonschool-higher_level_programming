@@ -10,7 +10,6 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max(self):
         """ Verificamos si los resultados son precisios o correstos"""
-
         self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 3)
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
@@ -22,13 +21,11 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_none(self):
         """Verificamos cuando nuestra funcion está vacía"""
-
         self.assertIsNone(max_integer())
 
     def test_except(self):
         """Verificamos nuestra funcion enviando diferentes
         tipos de datos y tambien dentro de una lista"""
-
         self.assertRaises(Exception, max_integer("Hola"))
         self.assertRaises(Exception, max_integer('8'))
         self.assertRaises(Exception, max_integer((3, 6, 8)))

@@ -26,6 +26,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_except(self):
         """Verificamos nuestra funcion enviando diferentes
         tipos de datos y tambien dentro de una lista"""
+
         self.assertRaises(Exception, max_integer("Hola"))
         self.assertRaises(Exception, max_integer('8'))
         self.assertRaises(Exception, max_integer((3, 6, 8)))

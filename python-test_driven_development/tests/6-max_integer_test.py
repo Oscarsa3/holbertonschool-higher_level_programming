@@ -24,3 +24,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_AorB(self):
         self.assertNotIn(max_integer([2, 5, 6, 1]), [4, 8, 9])
+
+    def test_Type(self):
+        self.assertRaises(TypeError, max_integer("Hola"))
+        self.assertRaises(TypeError, max_integer([8, 0, 5.6, 8, 9]))
+        self.assertRaises(TypeError, max_integer((3, 6, 8)))
+        self.assertRaises(TypeError, max_integer([7]))

@@ -17,7 +17,7 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
-                    print("{}".format(self.print_symbol), end='')
+                    print(self.print_symbol, end='')
                 if x == self.height - 1:
                     print("", end='')
                 else:
@@ -28,9 +28,9 @@ class Rectangle:
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif not isinstance(rect_2, Rectangle):
+        if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        elif rect_1.area() >= rect_2.area():
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2

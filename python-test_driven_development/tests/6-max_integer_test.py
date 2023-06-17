@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])"
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
@@ -22,8 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer(), None)
 
     def test_except(self):
-        """Verificamos nuestra funcion enviando diferentes
-        tipos de datos y tambien dentro de una lista"""
+        """Verificamos nuestra funcion"""
         self.assertRaises(TypeError, max_integer, None)
         self.assertRaises(Exception, max_integer("Hola"))
         self.assertRaises(Exception, max_integer((3, 6, 8)))

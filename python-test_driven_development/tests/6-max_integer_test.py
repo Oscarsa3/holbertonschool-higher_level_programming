@@ -10,7 +10,6 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max(self):
         """Verificamos si los resultados son precisios o correstos"""
-
         self.assertAlmostEqual(max_integer([1]), 1)
         self.assertAlmostEqual(max_integer([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 3)
         self.assertAlmostEqual(max_integer([1, 2, 3, 4]), 4)
@@ -19,6 +18,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([23, 65, 789]), 789)
         self.assertAlmostEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
         self.assertAlmostEqual(max_integer([]), None)
+        self.assertAlmostEqual(max_integer(), None)
 
     def test_except(self):
         """Verificamos nuestra funcion enviando diferentes

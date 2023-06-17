@@ -11,14 +11,14 @@ class TestMaxInteger(unittest.TestCase):
     def test_max(self):
         """ Verificamos si los resultados son precisios o correstos"""
 
-        self.assertAlmostEqual(max_integer([1]), 1)
-        self.assertAlmostEqual(max_integer([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 3)
-        self.assertAlmostEqual(max_integer([1, 2, 3, 4]), 4)
-        self.assertAlmostEqual(max_integer([1, 576, -56, -5678898765]), 576)
-        self.assertAlmostEqual(max_integer([-4, -8, -2354, -1]), -1)
-        self.assertAlmostEqual(max_integer([23, 65, 789]), 789)
-        self.assertAlmostEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
-        self.assertAlmostEqual(max_integer([]), None)
+        self.assertEqual(max_integer([1]), 1)
+        self.assertEqual(max_integer([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 3)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([1, 576, -56, -5678898765]), 576)
+        self.assertEqual(max_integer([-4, -8, -2354, -1]), -1)
+        self.assertEqual(max_integer([23, 65, 789]), 789)
+        self.assertEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
+        self.assertEqual(max_integer([]), None)
 
     def test_true(self):
         """Verificamos si nuestra funcion es correcta"""

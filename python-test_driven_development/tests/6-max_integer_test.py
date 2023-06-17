@@ -9,7 +9,8 @@ class TestMaxInteger(unittest.TestCase):
     """Define test about max_integer() function"""
 
     def test_max(self):
-        """ Verificamos si los resultados son precisios o correstos"""
+        """Verificamos si los resultados son precisios o correstos"""
+
         self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([3, 3, 3, 3, 3, 3, 3, 3, 3, 3]), 3)
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)

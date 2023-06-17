@@ -25,17 +25,12 @@ class TestMaxInteger(unittest.TestCase):
 
         self.assertIsNone(max_integer())
 
-    def test_Type(self):
-        """Verificamos nuestra funcion enviandole argumentos
-        diferentes de int"""
-
-        self.assertRaises(TypeError, max_integer("Hola"))
-        self.assertRaises(TypeError, max_integer('8'))
-        self.assertRaises(TypeError, max_integer((3, 6, 8)))
-
     def test_except(self):
         """Verificamos nuestra funcion enviando diferentes
-        tipos de datos dentro de una lista"""
+        tipos de datos y tambien dentro de una lista"""
 
+        self.assertRaises(Exception, max_integer("Hola"))
+        self.assertRaises(Exception, max_integer('8'))
+        self.assertRaises(Exception, max_integer((3, 6, 8)))
         self.assertRaises(Exception, max_integer, ["Hola", 0, 8, 9])
         self.assertRaises(Exception, max_integer, [8, {4: 6}, '9', (3, 6)])

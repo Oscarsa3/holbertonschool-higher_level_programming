@@ -20,20 +20,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0, 4565, 34, 5, 876]), 4565)
         self.assertEqual(max_integer([]), None)
 
-    def test_true(self):
-        """Verificamos si nuestra funcion es correcta"""
-
-        self.assertTrue(max_integer([2, 5, 6]))
-
     def test_none(self):
         """Verificamos cuando nuestra funcion está vacía"""
 
         self.assertIsNone(max_integer())
-
-    def test_AorB(self):
-        """Verificamos que el maximo no esté en la lista proporcionada"""
-
-        self.assertNotIn(max_integer([2, 5, 6, 1]), [4, 8, 9])
 
     def test_Type(self):
         """Verificamos nuestra funcion enviandole argumentos

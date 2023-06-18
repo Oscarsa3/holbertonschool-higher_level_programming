@@ -6,23 +6,24 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-    """Create test of max-integer() function"""
+    """test para la funcion max_integer"""
 
     def test_max(self):
-        """Define some cases test"""
-        self.assertAlmostEqual(max_integer([3, 5, 8, 9, 2]), 9)
-        self.assertAlmostEqual(max_integer([-3, -54678, -2, -456, -22]), -2)
-        self.assertAlmostEqual(max_integer([43, -678, 782, 56, -22]), 782)
-        self.assertAlmostEqual(max_integer([8, 8, 8, 8, 8]), 8)
-        self.assertAlmostEqual(max_integer([-3]), -3)
-        self.assertAlmostEqual(max_integer([5]), 5)
+        """Estos casos son  los definitivos"""
+        # Iniciamos los test
+        self.assertAlmostEqual(max_integer([1, 2, 3, 4, 5]), 5)
         self.assertAlmostEqual(max_integer([]), None)
         self.assertAlmostEqual(max_integer(), None)
+        self.assertAlmostEqual(max_integer([5, 5, 5, 5, 5]), 5)
+        self.assertAlmostEqual(max_integer([5]), 5)
+        self.assertAlmostEqual(max_integer([-5]), -5)
+        self.assertAlmostEqual(max_integer([-1, -80, -15, -100, -1998000]), -1)
+        self.assertAlmostEqual(max_integer([-1, -80, 15, 100, -1998]), 100)
 
     def test_values(self):
-        """Define some cases test"""
-        self.assertRaises(Exception, max_integer("Hola"))
+        """Seguimmos con mas casos de exception"""
         self.assertRaises(TypeError, max_integer, None)
-        self.assertRaises(Exception, max_integer((3, 8, 16, 78, 4)))
-        self.assertRaises(Exception, max_integer, ["hola", 7, 9])
-        self.assertRaises(Exception, max_integer, [{3: 8}, (4, 7), 9])
+        self.assertRaises(Exception, max_integer("Hola"))
+        self.assertRaises(Exception, max_integer, [4, None, "3"])
+        self.assertRaises(Exception, max_integer((4, 5, 6, 7)))
+        self.assertRaises(Exception, max_integer, [{4: 2, 2: 1}, (1, 2), 5])

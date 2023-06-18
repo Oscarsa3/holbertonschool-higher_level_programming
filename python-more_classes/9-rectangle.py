@@ -41,7 +41,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Define a classmethod"""
-        return cls(size,size)
+        return cls(size, size)
 
     def __repr__(self):
         """New instance"""

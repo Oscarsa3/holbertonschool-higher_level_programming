@@ -40,7 +40,6 @@ class Rectangle:
             return rect_2
 
     def __repr__(self):
-        Rectangle.number_of_instances += 1
         return 'Rectangle('+str(self.__width)+', '+str(self.__height)+')'
 
     def __del__(self):

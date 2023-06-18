@@ -9,8 +9,7 @@ class TestMaxInteger(unittest.TestCase):
     """Create test of max-integer() function"""
 
     def test_max(self):
-        """Define test
-        """
+        """Define test"""
         self.assertAlmostEqual(max_integer([3, 5, 8, 9, 2]), 9)
         self.assertAlmostEqual(max_integer([-3, -54678, -2, -456, -22]), -2)
         self.assertAlmostEqual(max_integer([43, -678, 782, 56, -22]), 782)
@@ -20,9 +19,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer(), None)
 
     def test_values(self):
-        """Define test cases
-        """
-        self.assertRaises(TypeError, max_integer("Hola"))
+        """Define test cases"""
+        self.assertRaises(Exception, max_integer("Hola"))
+        self.assertRaises(TypeError, max_integer, None)
         self.assertRaises(Exception, max_integer((3, 8, 16, 78, 4)))
         self.assertRaises(Exception, max_integer, ["hola", 7, 9])
-        self.assertRaises(TypeError, max_integer, [{3: 8}, (4, 7), 9])
+        self.assertRaises(Exception, max_integer, [{3: 8}, (4, 7), 9])

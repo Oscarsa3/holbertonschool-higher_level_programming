@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Create an empty class Rectangle that defines a rectangle"""
+"""Create an empty class Rectangle that defines a rectangle
+"""
 
 
 class Rectangle:
@@ -33,7 +34,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif type(rect_2) != Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        elif rect_1.area() >= rect_2.area():
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2
@@ -45,7 +46,7 @@ class Rectangle:
 
     def __repr__(self):
         """New instance"""
-        return 'Rectangle('+str(self.__width)+', '+str(self.__height)+')'
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Delete instance"""
@@ -67,7 +68,7 @@ class Rectangle:
         """Define setter width"""
         if type(value) != int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -76,7 +77,7 @@ class Rectangle:
         """Define setter height"""
         if type(value) != int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 

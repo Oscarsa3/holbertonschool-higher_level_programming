@@ -19,7 +19,7 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
-                    print("{}".format(self.print_symbol), end='')
+                    print(self.print_symbol, end='')
                 if x == self.height - 1:
                     print("", end='')
                 else:

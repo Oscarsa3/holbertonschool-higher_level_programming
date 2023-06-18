@@ -9,11 +9,13 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """Define init"""
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
 
     def __str__(self):
+        """Define str"""
         if self.__width != 0 and self.__height != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
@@ -26,6 +28,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """Define a static method"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
@@ -37,6 +40,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Define a classmethod"""
         return cls(width=size, height=size)
 
     def __repr__(self):

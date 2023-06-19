@@ -50,6 +50,8 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Return a new instance of Rectangle"""
+        width = size
+        height = size
         return cls(size, size)
 
     def __repr__(self):

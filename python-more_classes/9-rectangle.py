@@ -4,7 +4,7 @@
 
 
 class Rectangle:
-    """Define the function"""
+    """Define class Rectangle with a constructor"""
 
     number_of_instances = 0
     print_symbol = "#"
@@ -18,13 +18,13 @@ class Rectangle:
             width (int): The width of the rectangle
             height (int): The height of the rectangle
 
-        """ 
+        """
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Define str"""
+        """Print a rectangle with a given symbol"""
         if self.__width != 0 and self.__height != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
@@ -37,7 +37,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Define a static method"""
+        """Define a static method and verify Exceptions"""
         if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif type(rect_2) != Rectangle:
@@ -49,31 +49,31 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Define a classmethod"""
+        """Return a new instance of Rectangle"""
         return cls(size, size)
 
     def __repr__(self):
-        """New instance"""
+        """Return a string that contain a new instance of rectangle"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Delete instance"""
+        """Delete instance and print a message"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
     def height(self):
-        """Property height"""
+        """Property to  return the height of the rectangle"""
         return self.__height
 
     @property
     def width(self):
-        """Property width"""
+        """Property to return the width of the rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Define setter width"""
+        """This setter width checked if it's an integer"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -82,7 +82,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Define setter height"""
+        """This setter height checked if it's an integer"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:
@@ -90,11 +90,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return area"""
+        """Return area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Return perimeter"""
+        """Return perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2

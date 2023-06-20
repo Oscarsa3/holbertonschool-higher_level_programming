@@ -1,1 +1,1 @@
-##This proyect is about inherence
+This proyect is about inherence

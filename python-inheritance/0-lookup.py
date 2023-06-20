@@ -1,5 +1,8 @@
 #!usr/bin/python3
-"""function that returns the list attributes and methods of object
+"""
+function that returns
+the list attributes
+and methods of object
 """
 
 

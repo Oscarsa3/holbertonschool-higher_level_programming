@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """a class Rectangle that inherits from BaseGeometry and
 has an init method and instantion with args width and
 height"""
+
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):

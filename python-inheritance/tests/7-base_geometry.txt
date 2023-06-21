@@ -2,6 +2,8 @@
 
 >>> bg = BaseGeometry()
 
+>>> bg.integer_validator("Oscar", 456785)
+
 >>> bg.integer_validator("Oscar", "Salinas")
 Traceback (most recent call last):
 ...
@@ -29,7 +31,6 @@ Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-
 >>> bg.integer_validator("Oscar", None)
 Traceback (most recent call last):
 ..
@@ -50,3 +51,7 @@ Traceback (most recent call last):
 ...
 TypeError: Oscar must be an integer
 
+>>> bg.integer_validator("Oscar", 8.45)
+Traceback (most recent call last):
+...
+TypeError: Oscar must be an integer

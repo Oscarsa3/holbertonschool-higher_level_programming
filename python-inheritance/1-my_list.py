@@ -5,4 +5,5 @@
 class MyList(list):
     """This class inherits from list, have a method"""
     def print_sorted(self):
+        """Ordena de forma ascendente"""
         super().sort()

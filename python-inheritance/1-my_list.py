@@ -4,7 +4,7 @@ in ascending sort"""
 
 
 class MyList(list):
-    """print sorted method
-    """
+    """Print_sorted method"""
     def print_sorted(self):
+        """Print a list sorted"""
         print(sorted(self))

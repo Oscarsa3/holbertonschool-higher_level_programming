@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""class MyList that inherits from list and has a
-public instance method that prints the
-list but sorted"""
+"""Define class Mylist"""
 
 
 class MyList(list):

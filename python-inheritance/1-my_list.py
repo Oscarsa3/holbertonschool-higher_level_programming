@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""define class Mylist"""
+"""define class mylist that print sorted
+in ascending sort"""
 
 
 class MyList(list):

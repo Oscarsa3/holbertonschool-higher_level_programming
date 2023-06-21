@@ -12,8 +12,8 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Size must be private and positive integer"""
-        self.__size = size
         super().integer_validator("size", size)
+        self.__size = size
 
     def area(self):
         """Return the area"""

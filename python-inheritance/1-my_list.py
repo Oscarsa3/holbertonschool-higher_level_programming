@@ -5,7 +5,7 @@ sort, this class only has a method"""
 
 
 class MyList(list):
-    """this class has Print_sorted method"""
+    """Has a method"""
     def print_sorted(self):
-        """This method Print a list sorted"""
+        """Print a list sorted and return list without sort"""
         print(sorted(self))

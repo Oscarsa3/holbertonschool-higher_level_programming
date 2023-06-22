@@ -1,7 +1,12 @@
->>> print_sorted = __import__('1-my_list').print_sorted
+>>> ml = __import__('1-my_list').MyList
 
->>> print_sorted([3, 6, 7, 9])
+>>> ml.print_sorted([3, 6, 7, 9])
 [3, 6, 7, 9]
 
->>> print_sorted([7, 56, 8, 87, 23])
+>>> ml.print_sorted([7, 56, 8, 87, 23])
 [7, 8, 23, 56, 87]
+
+>>> ml.print_sorted([7, 56, "8", 87, 23])
+Traceback (most recent call last):
+    ...
+TypeError: '<' not supported between instances of 'str' and 'int'

@@ -17,6 +17,16 @@ Traceback (most recent call last):
    ...
 TypeError: area() takes 1 positional argument but 2 were given
 
+>>> bg.integer_validator("Oscar", {"Hola": 6, "A": 7})
+Traceback (most recent call last):
+    ...
+TypeError: Oscar must be an integer
+
+>>> bg.integer_validator("Oscar", (5, 7, 9))
+Traceback (most recent call last):
+    ...
+TypeError: Oscar must be an integer
+
 >>> bg.integer_validator([6], 56, 9)
 Traceback (most recent call last):
     ...

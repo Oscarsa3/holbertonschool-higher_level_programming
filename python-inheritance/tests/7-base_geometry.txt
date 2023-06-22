@@ -2,6 +2,11 @@
 
 >>> bg = BaseGeometry()
 
+>>> bg.area(3, 4)
+Traceback (most recent call last):
+    ...
+TypeError: area() takes 1 positional argument but 3 were given
+
 >>> bg.area()
 Traceback (most recent call last):
     ...
@@ -97,3 +102,8 @@ TypeError: None must be an integer
 Traceback (most recent call last):
     ...
 TypeError: None must be an integer
+
+>>> bg.integer_validator("Oscar", True)
+Traceback (most recent call last):
+    ...
+TypeError: Oscar must be an integer

@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """define class mylist that print sortedin ascending
-sort"""
+sort, this class only has a method"""
 
 
 class MyList(list):
-    """Print_sorted method"""
+    """this class has Print_sorted method"""
 
     def print_sorted(self):
-        """Print a list sorted"""
+        """This method Print a list sorted"""
 
         print(sorted(self))

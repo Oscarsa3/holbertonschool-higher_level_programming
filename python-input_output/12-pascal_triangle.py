@@ -6,7 +6,7 @@ the Pascal’s triangle"""
 def pascal_triangle(n):
     """Return a matrix of integers representing the Pascal's triangle of n"""
     if n <= 0:
-        return [[]]
+        return []
 
     tri = [[1]]
     for i in range(n - 1):

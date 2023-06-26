@@ -63,6 +63,11 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def __str__(self):
+        """Overriding the str method"""
+        return f"""[{self.__class__.__name__}]({self.id}) \
+{self.__x}/{self.__y} - {self.__width}/{self.__height}"""
+
     def area(self):
         """Return that returns the area value of the Rectangle instance"""
         return self.__width * self.__height

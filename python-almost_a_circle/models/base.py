@@ -70,5 +70,5 @@ class Base:
                 for i in range(len(my_list)):
                     my_list[i] = cls.create(**my_list[i])
                 return my_list
-        except FileNotFoundError:
+        except Exception:
             return []

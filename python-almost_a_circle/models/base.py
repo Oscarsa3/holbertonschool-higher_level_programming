@@ -58,3 +58,19 @@ class Base:
             ins = Square(34)
         ins.update(**dictionary)
         return ins
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = f"{cls.__name__}.json"
+
+        try:
+            with open(filename, 'r') as f:
+                my_list = cls.from_json_string(f.read())
+                for i in range(len(my_list)):
+                    my_list[i] = cls.create(**my_list[i])
+
+        except FileNotFoundError:
+            my_list = []
+
+        return my_list

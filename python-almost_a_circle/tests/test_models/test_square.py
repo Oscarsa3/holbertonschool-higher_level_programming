@@ -9,6 +9,14 @@ from models.square import Square
 class Test_Square(unittest.TestCase):
     """Test for differents cases"""
     def test_class_square(self):
+        s2 = Square(5)
+        self.assertAlmostEqual(s2.id, 6)
+        self.assertAlmostEqual(s2.area(), 25)
+        self.assertAlmostEqual(s2.width, 5)
+        self.assertAlmostEqual(s2.height, 5)
+        self.assertAlmostEqual(s2.x, 0)
+        self.assertAlmostEqual(s2.y, 0)
+
         s1 = Square(10, 0, 0, 12)
         self.assertAlmostEqual(s1.id, 12)
         self.assertAlmostEqual(s1.width, 10)
@@ -19,6 +27,5 @@ class Test_Square(unittest.TestCase):
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
-        result = style.check_files(['models/rectangle.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+        result = style.check_files(['models/square.py'])
+        self.assertEqual(result.total_errors, 0, "Found errors")

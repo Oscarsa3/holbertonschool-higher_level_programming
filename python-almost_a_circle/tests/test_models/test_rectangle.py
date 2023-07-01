@@ -21,6 +21,7 @@ class Test_Rectangle(unittest.TestCase):
         # self.assertRaises(ValueError, r4.width)
 
         r2 = Rectangle(12, 8)
+        self.assertAlmostEqual(r2.id, 5)
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.width, 12)
 

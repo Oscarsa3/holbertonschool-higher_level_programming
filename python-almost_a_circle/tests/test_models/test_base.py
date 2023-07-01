@@ -25,6 +25,7 @@ class Test_Base(unittest.TestCase):
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
-        result = style.check_files(['models/base.py'])
+        result = style.check_files(['models/base.py',
+                                   'tests/test_models/test_base.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")

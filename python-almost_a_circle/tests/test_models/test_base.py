@@ -81,6 +81,7 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(r2.height, 5)
         self.assertAlmostEqual(r2.x, 1)
         self.assertAlmostEqual(r2.y, 0)
+        self.assertAlmostEqual(r2.area(), 15)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
         s1 = Square(5)
@@ -92,6 +93,7 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(s2.height, 5)
         self.assertAlmostEqual(s2.x, 0)
         self.assertAlmostEqual(s2.y, 0)
+        self.assertAlmostEqual(s2.area(), 25)
         self.assertFalse(s1 == s2)
         self.assertFalse(s1 is s2)
 

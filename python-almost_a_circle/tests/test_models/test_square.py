@@ -27,5 +27,6 @@ class Test_Square(unittest.TestCase):
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
-        result = style.check_files(['models/square.py'])
+        result = style.check_files(['models/square.py',
+                                   'tests/test_models/test_square.py'])
         self.assertEqual(result.total_errors, 0, "Found errors")

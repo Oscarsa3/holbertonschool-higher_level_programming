@@ -65,7 +65,10 @@ class Test_Base(unittest.TestCase):
         r2 = Rectangle.create(**r1_d)
         self.assertAlmostEqual(r1.id, 5)
         self.assertAlmostEqual(r2.id, 5)
-        self.assertAlmostEqual(r2, r2)
+        self.assertAlmostEqual(r2.width, 3)
+        self.assertAlmostEqual(r2.height, 5)
+        self.assertAlmostEqual(r2.x, 1)
+        self.assertAlmostEqual(r2.y, 0)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
 
@@ -105,5 +108,6 @@ class Test_Base(unittest.TestCase):
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
-        result = style.check_files(['models/base.py', 'models/rectangle.py'])
+        result = style.check_files(['models/base.py',
+                                    'tests/test_models/test_base.py'])
         self.assertEqual(result.total_errors, 0, "Found errors")

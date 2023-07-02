@@ -27,10 +27,8 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(b6.id, 4)
         b7 = Base(complex(9))
         self.assertAlmostEqual(b7.id, complex(9))
-        b8 = Base(float("NaN"))
-        self.assertNotEqual(b8.id, "nan")
-        b9 = Base(float("inf"))
-        self.assertNotEqual(b9.id, "inf")
+        b8 = Base(frozenset({1, 3, 5}))
+        self.assertAlmostEqual(b8.id, frozenset({1, 3, 5}))
         with self.assertRaises(AttributeError):
             print(Base(12).__nb_instances)
 

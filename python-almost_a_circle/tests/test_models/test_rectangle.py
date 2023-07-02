@@ -39,6 +39,12 @@ class Test_Rectangle(unittest.TestCase):
         self.assertAlmostEqual(r1.x, 0)
         self.assertAlmostEqual(r1.y, 0)
 
+    def test_to_dictionary(self):
+        """Test for this method"""
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertAlmostEqual(r1.to_dictionary(), r1.to_dictionary())
+        self.assertAlmostEqual(type(r1.to_dictionary()), dict)
+
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)

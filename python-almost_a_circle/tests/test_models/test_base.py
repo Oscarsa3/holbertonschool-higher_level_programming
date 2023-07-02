@@ -57,6 +57,15 @@ class Test_Base(unittest.TestCase):
         with open("Rectangle.json", "r") as f:
             self.assertAlmostEqual(f.readline(), fi3)
 
+    def test_create(self):
+        """Test for this method"""
+        r1 = Rectangle(3, 5, 1)
+        r1_d = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_d)
+        self.assertAlmostEqual(r1.id, 5)
+        self.assertFalse(r1 == r2)
+        self.assertFalse(r1 is r2)
+
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)

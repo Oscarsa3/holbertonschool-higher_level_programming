@@ -44,6 +44,9 @@ class Test_Rectangle(unittest.TestCase):
         r1 = Rectangle(10, 2, 1, 9)
         self.assertAlmostEqual(r1.to_dictionary(), r1.to_dictionary())
         self.assertAlmostEqual(type(r1.to_dictionary()), dict)
+        r2 = Rectangle(1, 1)
+        r2.update(**r1.to_dictionary())
+        self.assertFalse(r1 == r2)
 
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""

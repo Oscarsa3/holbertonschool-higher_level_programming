@@ -11,7 +11,7 @@ class Test_Square(unittest.TestCase):
     def test_class_square(self):
         """Test for this method"""
         s2 = Square(5)
-        self.assertAlmostEqual(s2.id, 34)
+        self.assertAlmostEqual(s2.id, 35)
         self.assertAlmostEqual(s2.area(), 25)
         self.assertAlmostEqual(s2.width, 5)
         self.assertAlmostEqual(s2.height, 5)

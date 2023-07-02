@@ -5,6 +5,7 @@ import unittest
 import pycodestyle
 import json
 from models.base import Base
+from models.square import Square
 from models.rectangle import Rectangle
 
 
@@ -63,9 +64,43 @@ class Test_Base(unittest.TestCase):
         r1_d = r1.to_dictionary()
         r2 = Rectangle.create(**r1_d)
         self.assertAlmostEqual(r1.id, 5)
+        self.assertAlmostEqual(r2.id, 5)
         self.assertAlmostEqual(r2, r2)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
+
+    def test_load_from_file(self):
+        """Test for this method"""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_input = [r1, r2]
+        Rectangle.save_to_file(list_input)
+        list_output = Rectangle.load_from_file()
+        self.assertAlmostEqual(list_output[0].id, 7)
+        self.assertAlmostEqual(list_output[0].x, 2)
+        self.assertAlmostEqual(list_output[0].width, 10)
+        self.assertAlmostEqual(list_output[0].height, 7)
+        self.assertAlmostEqual(list_output[0].y, 8)
+        self.assertAlmostEqual(list_output[1].id, 8)
+        self.assertAlmostEqual(list_output[1].x, 0)
+        self.assertAlmostEqual(list_output[1].width, 2)
+        self.assertAlmostEqual(list_output[1].height, 4)
+        self.assertAlmostEqual(list_output[1].y, 0)
+        s1 = Square(5)
+        s2 = Square(7, 9, 1)
+        sinput = [s1, s2]
+        Square.save_to_file(sinput)
+        soutput = Square.load_from_file()
+        self.assertAlmostEqual(soutput[0].id, 11)
+        self.assertAlmostEqual(soutput[0].width, 5)
+        self.assertAlmostEqual(soutput[0].height, 5)
+        self.assertAlmostEqual(soutput[0].x, 0)
+        self.assertAlmostEqual(soutput[0].y, 0)
+        self.assertAlmostEqual(soutput[1].id, 12)
+        self.assertAlmostEqual(soutput[1].width, 7)
+        self.assertAlmostEqual(soutput[1].height, 7)
+        self.assertAlmostEqual(soutput[1].x, 9)
+        self.assertAlmostEqual(soutput[1].y, 1)
 
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""

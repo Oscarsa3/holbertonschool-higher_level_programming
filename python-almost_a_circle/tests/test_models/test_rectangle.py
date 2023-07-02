@@ -11,7 +11,7 @@ class Test_Rectangle(unittest.TestCase):
     def test_class_rectangle(self):
 
         r2 = Rectangle(12, 8)
-        self.assertAlmostEqual(r2.id, 9)
+        self.assertAlmostEqual(r2.id, 17)
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.width, 12)
 

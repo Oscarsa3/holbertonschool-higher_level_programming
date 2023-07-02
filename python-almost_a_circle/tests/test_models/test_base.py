@@ -63,6 +63,7 @@ class Test_Base(unittest.TestCase):
         r1_d = r1.to_dictionary()
         r2 = Rectangle.create(**r1_d)
         self.assertAlmostEqual(r1.id, 5)
+        self.assertAlmostEqual(r2, r2)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
 

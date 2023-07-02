@@ -25,6 +25,8 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(b5.id, 2)
         b6 = Base()
         self.assertAlmostEqual(b6.id, 4)
+        b7 = Base(complex(9))
+        self.assertAlmostEqual(b7.id, complex(9))
         with self.assertRaises(AttributeError):
             print(Base(12).__nb_instances)
 

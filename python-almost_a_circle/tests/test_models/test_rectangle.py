@@ -9,9 +9,12 @@ from models.rectangle import Rectangle
 class Test_Rectangle(unittest.TestCase):
     """Test for differents cases"""
     def test_class_rectangle(self):
-
+        r3 = Rectangle(1, 2)
+        self.assertAlmostEqual(r3.id, 17)
+        self.assertAlmostEqual(r3.x, 0)
+        self.assertAlmostEqual(r3.y, 0)
         r2 = Rectangle(12, 8)
-        self.assertAlmostEqual(r2.id, 17)
+        self.assertAlmostEqual(r2.id, 18)
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.width, 12)
         self.assertAlmostEqual(r2.x, 0)

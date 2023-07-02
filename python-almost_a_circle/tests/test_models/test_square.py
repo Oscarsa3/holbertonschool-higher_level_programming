@@ -10,7 +10,7 @@ class Test_Square(unittest.TestCase):
     """Test for differents cases"""
     def test_class_square(self):
         s2 = Square(5)
-        self.assertAlmostEqual(s2.id, 18)
+        self.assertAlmostEqual(s2.id, 19)
         self.assertAlmostEqual(s2.area(), 25)
         self.assertAlmostEqual(s2.width, 5)
         self.assertAlmostEqual(s2.height, 5)

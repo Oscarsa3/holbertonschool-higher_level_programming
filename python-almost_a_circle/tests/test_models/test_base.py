@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Unittest for class base
 """
-
-
 import unittest
 import pycodestyle
 import json
@@ -51,7 +49,6 @@ class Test_Base(unittest.TestCase):
             self.assertAlmostEqual(f.readline(), '[]')
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
-
         Rectangle.save_to_file([r1, r2])
         fi1 = r1.to_dictionary()
         fi2 = r2.to_dictionary()

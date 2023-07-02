@@ -12,6 +12,7 @@ from models.rectangle import Rectangle
 class Test_Base(unittest.TestCase):
     """Test for differents cases"""
     def test_class_Base(self):
+        """Test for this method"""
         b1 = Base()
         self.assertAlmostEqual(b1.id, 1)
         b2 = Base()

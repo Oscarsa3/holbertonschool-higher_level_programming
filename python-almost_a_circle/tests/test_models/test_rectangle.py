@@ -32,7 +32,6 @@ class Test_Rectangle(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 2, 3, 0, -1)
         self.assertRaises(ValueError, Rectangle, 2, 3, -5, 1)
         self.assertRaises(TypeError, Rectangle, 2, 3, 5.6, 1)
-
         r1 = Rectangle(10, 2, 0, 0, 12)
         self.assertAlmostEqual(r1.id, 12)
         self.assertAlmostEqual(r1.width, 10)

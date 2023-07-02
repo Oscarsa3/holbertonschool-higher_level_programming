@@ -9,6 +9,7 @@ from models.square import Square
 class Test_Square(unittest.TestCase):
     """Test for differents cases"""
     def test_class_square(self):
+        """Test for this method"""
         s2 = Square(5)
         self.assertAlmostEqual(s2.id, 29)
         self.assertAlmostEqual(s2.area(), 25)
@@ -16,7 +17,6 @@ class Test_Square(unittest.TestCase):
         self.assertAlmostEqual(s2.height, 5)
         self.assertAlmostEqual(s2.x, 0)
         self.assertAlmostEqual(s2.y, 0)
-
         s1 = Square(10, 0, 0, 12)
         self.assertAlmostEqual(s1.id, 12)
         self.assertAlmostEqual(s1.width, 10)

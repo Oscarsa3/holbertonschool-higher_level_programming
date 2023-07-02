@@ -25,6 +25,8 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(b5.id, 2)
         b6 = Base()
         self.assertAlmostEqual(b6.id, 4)
+        with self.assertRaises(AttributeError):
+            print(Base(12).__nb_instances)
 
     def test_to_json_string(self):
         """test for this method"""

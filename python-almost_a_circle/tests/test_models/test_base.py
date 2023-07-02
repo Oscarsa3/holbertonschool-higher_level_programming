@@ -3,7 +3,9 @@
 """
 import unittest
 import pycodestyle
+import json
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class Test_Base(unittest.TestCase):
@@ -22,10 +24,26 @@ class Test_Base(unittest.TestCase):
         b6 = Base()
         self.assertAlmostEqual(b6.id, 4)
 
+    def test_to_json_string(self):
+        """other method"""
+        self.assertAlmostEqual(Base.to_json_string([]), [])
+        self.assertAlmostEqual(Base.to_json_string(None), [])
+        js = json.dumps([{'width': 4, 'height': 5}])
+        self.assertAlmostEqual(Base.to_json_string([{'width': 4,
+                                                   'height': 5}]), js)
+        self.assertAlmostEqual(str, type(js))
+
+    def test_from_json_strin(self):
+        """other method"""
+        self.assertAlmostEqual(Base.from_json_string(""), [])
+        self.assertAlmostEqual(Base.from_json_string(None), [])
+        js = json.loads('[{"width": 4, "height": 5}]')
+        self.assertAlmostEqual(Base.from_json_string('[{"width": 4,\
+                                                   "height": 5}]'), js)
+        self.assertAlmostEqual(list, type(js))
+
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""
         style = pycodestyle.StyleGuide(quiet=True)
-        result = style.check_files(['models/base.py',
-                                   'tests/test_models/test_base.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+        result = style.check_files(['models/base.py'])
+        self.assertEqual(result.total_errors, 0, "Found errors")

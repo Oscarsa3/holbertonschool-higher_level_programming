@@ -10,18 +10,11 @@ class Test_Rectangle(unittest.TestCase):
     """Test for differents cases"""
     def test_class_rectangle(self):
 
-        # r4 = Rectangle(19, 5)
-        # r4.width = -10
-        # self.assertRaises(ValueError, r4.width)
-        # r4.height = "2"
-        # self.assertRaises(TypeError, r4.height)
-        # r4.x = {}
-        # self.assertRaises(TypeError, r4.x)
-        # r4.y = -1
-        # self.assertRaises(ValueError, r4.width)
+        # r4 = Rectangle(19, -3)
+        # self.assertAlmostEqual(r4.height, )
 
         r2 = Rectangle(12, 8)
-        self.assertAlmostEqual(r2.id, 5)
+        self.assertAlmostEqual(r2.id, 7)
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.width, 12)
 

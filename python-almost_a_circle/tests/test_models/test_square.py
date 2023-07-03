@@ -15,6 +15,13 @@ class Test_Square(unittest.TestCase):
         self.assertAlmostEqual(s2.area(), 25)
         self.assertAlmostEqual(s2.width, 5)
         self.assertAlmostEqual(s2.height, 5)
+        self.assertRaises(TypeError, Square, "4")
+        self.assertRaises(TypeError, Square, 1, "4")
+        self.assertRaises(TypeError, Square, 1, 5, "8")
+        self.assertRaises(ValueError, Square, -2)
+        self.assertRaises(ValueError, Square, 4, -2)
+        self.assertRaises(ValueError, Square, 4, 8, -2)
+        self.assertRaises(ValueError, Square, 0)
         self.assertAlmostEqual(s2.x, 0)
         self.assertAlmostEqual(s2.y, 0)
         s1 = Square(10, 0, 0, 12)
@@ -23,6 +30,17 @@ class Test_Square(unittest.TestCase):
         self.assertAlmostEqual(s1.height, 10)
         self.assertAlmostEqual(s1.x, 0)
         self.assertAlmostEqual(s1.y, 0)
+
+    def test_str(self):
+        """Test for this method"""
+        s1 = Square(4, 2, 1, 15)
+        self.assertAlmostEqual(s1.area(), 16)
+
+    def test_save_to_file(self):
+        """Test for this method"""
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
 
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""

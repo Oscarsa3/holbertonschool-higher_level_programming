@@ -3,6 +3,9 @@
 """
 import unittest
 import pycodestyle
+from unittest import mock
+import io
+from unittest.mock import patch
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -46,6 +49,14 @@ class Test_Rectangle(unittest.TestCase):
         r1 = Rectangle(3, 4, 2, 1, 15)
         self.assertAlmostEqual(r1.area(), 12)
 
+    def test_display(self):
+        """Test for this method"""
+        r1 = Rectangle(1, 2)
+        c = f"[Rectangle] ({r1.id}) 0/0 - 1/2\n"
+        with mock.patch("sys.stdout", new=io.StringIO()) as f:
+            print(r1)
+        assert f.getvalue() == c
+
     def test_update(self):
         """Test for this method"""
 
@@ -63,6 +74,9 @@ class Test_Rectangle(unittest.TestCase):
         self.assertTrue(r1.id, r2.id)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
+
+    def test_save_to_fiel(self):
+        """"""
 
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""

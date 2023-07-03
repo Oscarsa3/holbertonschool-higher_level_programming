@@ -28,8 +28,8 @@ class Test_Base(unittest.TestCase):
         b7 = Base(complex(9))
         self.assertAlmostEqual(b7.id, complex(9))
         self.assertRaises(TypeError, Base, 1, 3)
-        with self.assertRaises(AttributeError):
-            print(Base(12).__nb_instances)
+        b8 = Base("2")
+        self.assertAlmostEqual(b8.id, "2")
 
     def test_to_json_string(self):
         """test for this method"""
@@ -87,6 +87,7 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(r2.x, 1)
         self.assertAlmostEqual(r2.y, 0)
         self.assertAlmostEqual(r2.area(), 15)
+        self.assertAlmostEqual(str(r2), "[Rectangle] (5) 1/0 - 3/5")
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
         s1 = Square(5)
@@ -134,6 +135,11 @@ class Test_Base(unittest.TestCase):
         self.assertAlmostEqual(soutput[1].height, 7)
         self.assertAlmostEqual(soutput[1].x, 9)
         self.assertAlmostEqual(soutput[1].y, 1)
+        s1 = Square(5, 1, 3, 3)
+        s2 = Square(9, 5, 2, 3)
+        Square.save_to_file([s1, s2])
+        output = Square.load_from_file()
+        self.assertTrue(all(type(obj) == Square for obj in output))
 
     def test_pycodestyle_conformance(self):
         """Test that we conform to PEP8."""

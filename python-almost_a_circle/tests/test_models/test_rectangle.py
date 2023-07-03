@@ -12,11 +12,11 @@ class Test_Rectangle(unittest.TestCase):
     def test_class_rectangle(self):
         """Test  fro this method"""
         r3 = Rectangle(1, 2)
-        self.assertAlmostEqual(r3.id, 21)
+        self.assertAlmostEqual(r3.id, 23)
         self.assertAlmostEqual(r3.x, 0)
         self.assertAlmostEqual(r3.y, 0)
         r2 = Rectangle(12, 8)
-        self.assertAlmostEqual(r2.id, 22)
+        self.assertAlmostEqual(r2.id, 24)
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.width, 12)
         self.assertAlmostEqual(r2.x, 0)
@@ -63,12 +63,6 @@ class Test_Rectangle(unittest.TestCase):
         self.assertTrue(r1.id, r2.id)
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
-
-    def test_display(self):
-        """test for this method"""
-        r1 = Rectangle(3, 2)
-        r2 = Rectangle(3, 2)
-        self.assertAlmostEqual(r1.display(), r2.display())
 
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""

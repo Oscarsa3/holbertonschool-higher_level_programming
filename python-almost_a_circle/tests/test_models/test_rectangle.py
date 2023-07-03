@@ -52,10 +52,17 @@ class Test_Rectangle(unittest.TestCase):
     def test_display(self):
         """Test for this method"""
         r1 = Rectangle(1, 2)
-        c = f"[Rectangle] ({r1.id}) 0/0 - 1/2\n"
         with mock.patch("sys.stdout", new=io.StringIO()) as f:
-            print(r1)
-        assert f.getvalue() == c
+            r1.display()
+        assert f.getvalue() == "#\n#\n"
+        r2 = Rectangle(1, 2, 1)
+        with mock.patch("sys.stdout", new=io.StringIO()) as f:
+            r2.display()
+        assert f.getvalue() == " #\n #\n"
+        r3 = Rectangle(1, 2, 1, 1)
+        with mock.patch("sys.stdout", new=io.StringIO()) as f:
+            r3.display()
+        assert f.getvalue() == "\n #\n #\n"
 
     def test_update(self):
         """Test for this method"""

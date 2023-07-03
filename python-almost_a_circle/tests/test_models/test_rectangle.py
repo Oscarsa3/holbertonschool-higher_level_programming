@@ -91,6 +91,12 @@ class Test_Rectangle(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
 
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""

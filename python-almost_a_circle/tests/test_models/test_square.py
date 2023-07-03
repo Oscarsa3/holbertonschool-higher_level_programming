@@ -7,6 +7,8 @@ from unittest import mock
 import io
 from unittest.mock import patch
 from models.square import Square
+from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Test_Square(unittest.TestCase):
@@ -46,6 +48,12 @@ class Test_Square(unittest.TestCase):
         """Test for this method"""
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
         Square.save_to_file([])
         with open("Square.json", "r") as f:

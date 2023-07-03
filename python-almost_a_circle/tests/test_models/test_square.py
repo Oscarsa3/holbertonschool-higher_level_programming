@@ -3,6 +3,9 @@
 """
 import unittest
 import pycodestyle
+from unittest import mock
+import io
+from unittest.mock import patch
 from models.square import Square
 
 
@@ -35,10 +38,16 @@ class Test_Square(unittest.TestCase):
         """Test for this method"""
         s1 = Square(4, 2, 1, 15)
         self.assertAlmostEqual(s1.area(), 16)
+        with mock.patch("sys.stdout", new=io.StringIO()) as f:
+            print(s1)
+        assert f.getvalue() == "[Square] (15) 2/1 - 4\n"
 
     def test_save_to_file(self):
         """Test for this method"""
         Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
 

@@ -29,7 +29,7 @@ class Base:
         """writes the json string representation de list_objs to a file"""
         filename = f"{cls.__name__}.json"
 
-        if list_objs is None:
+        if list_objs is None or not list_objs:
             es = []
         else:
             es = []

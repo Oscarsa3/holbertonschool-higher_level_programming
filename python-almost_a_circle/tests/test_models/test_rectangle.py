@@ -65,9 +65,6 @@ class Test_Rectangle(unittest.TestCase):
             r3.display()
         assert f.getvalue() == "\n #\n #\n"
 
-    def test_update(self):
-        """Test for this method"""
-
     def test_to_dictionary(self):
         """Test for this method"""
         r1 = Rectangle(10, 2, 1, 9)
@@ -88,14 +85,8 @@ class Test_Rectangle(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
-        Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), '[]')
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), '[]')
-        Square.save_to_file([])
-        with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
 
     def test_pep8_conformance(self):

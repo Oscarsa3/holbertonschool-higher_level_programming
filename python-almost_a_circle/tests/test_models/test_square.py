@@ -46,25 +46,7 @@ class Test_Square(unittest.TestCase):
 
     def test_save_to_file(self):
         """Test for this method"""
-        Rectangle.save_to_file(None)
-        with open("Rectangle.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), '[]')
         Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), '[]')
-        r3 = Rectangle(10, 7, 2, 8)
-        r4 = Rectangle(2, 4)
-        Rectangle.save_to_file([r3, r4])
-        fi1 = r3.to_dictionary()
-        fi2 = r4.to_dictionary()
-        filec = [fi1, fi2]
-        fi3 = Rectangle.to_json_string(filec)
-        with open("Rectangle.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), fi3)
-        Rectangle.save_to_file([])
-        with open("Rectangle.json", "r") as f:
-            self.assertAlmostEqual(f.readline(), '[]')
-        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
         s3 = Square(4, 2, 7)

@@ -54,9 +54,6 @@ class Test_Base(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
-        # Square.save_to_file(None)
-        # with open("Square.json", "r") as f:
-        #    self.assertAlmostEqual(f.readline(), '[]')
         r3 = Rectangle(10, 7, 2, 8)
         r4 = Rectangle(2, 4)
         Rectangle.save_to_file([r3, r4])
@@ -80,6 +77,9 @@ class Test_Base(unittest.TestCase):
         s3 = Square.to_json_string([ss1, ss2])
         with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), s3)
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
 
     def test_create(self):
         """Test for this method"""

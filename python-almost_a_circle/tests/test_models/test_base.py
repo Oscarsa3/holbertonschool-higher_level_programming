@@ -66,6 +66,12 @@ class Test_Base(unittest.TestCase):
         fi3 = Rectangle.to_json_string(filec)
         with open("Rectangle.json", "r") as f:
             self.assertAlmostEqual(f.readline(), fi3)
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
         s1 = Square(4, 2, 7)
         s2 = Square(5)
         Square.save_to_file([s1, s2])

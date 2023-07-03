@@ -7,6 +7,7 @@ from unittest import mock
 import io
 from unittest.mock import patch
 from models.base import Base
+from models.square import Square
 from models.rectangle import Rectangle
 
 
@@ -82,8 +83,14 @@ class Test_Rectangle(unittest.TestCase):
         self.assertFalse(r1 == r2)
         self.assertFalse(r1 is r2)
 
-    def test_save_to_fiel(self):
-        """"""
+    def test_save_to_file(self):
+        """Test for this method"""
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
 
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""

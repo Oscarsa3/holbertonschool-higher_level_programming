@@ -16,7 +16,7 @@ class Test_Square(unittest.TestCase):
     def test_class_square(self):
         """Test for this method"""
         s2 = Square(5)
-        self.assertAlmostEqual(s2.id, 37)
+        self.assertAlmostEqual(s2.id, 39)
         self.assertAlmostEqual(s2.area(), 25)
         self.assertAlmostEqual(s2.width, 5)
         self.assertAlmostEqual(s2.height, 5)
@@ -47,6 +47,9 @@ class Test_Square(unittest.TestCase):
     def test_save_to_file(self):
         """Test for this method"""
         Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertAlmostEqual(f.readline(), '[]')
+        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertAlmostEqual(f.readline(), '[]')
         s3 = Square(4, 2, 7)

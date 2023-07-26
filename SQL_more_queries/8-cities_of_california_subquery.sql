@@ -1,5 +1,5 @@
 -- this script lists all the cities of California that can be found in the database
-SELECT id, state_id, name
+SELECT id, name
 FROM cities
 WHERE state_id = (
 		SELECT id

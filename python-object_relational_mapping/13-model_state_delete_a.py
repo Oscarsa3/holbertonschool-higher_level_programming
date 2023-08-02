@@ -17,10 +17,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     sesion = Session()
 
+    sesion.query(State).filter(State.name.like('%a%')
+                               ).delete(synchronize_session=False)
+    sesion.commit()
+    """other form
     rows = sesion.query(State).filter(State.name.like('%a%')).all()
     if rows:
         for row in rows:
             sesion.delete(row)
-        sesion.commit()
+        sesion.commit()"""
 
     sesion.close()
